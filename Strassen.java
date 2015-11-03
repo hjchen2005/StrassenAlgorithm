@@ -1,11 +1,13 @@
-
 public class Strassen {
-	public static int count =0;
+	public static int countAddition =0;
+	public static int countMultiplication =0;
 	public int[][] multiply(int[][] A, int[][] B){
 		int n=A.length;
 		int[][] R = new int[n][n];
-		if (n==1)
+		if (n==1){
 			R[0][0] = A[0][0] * B[0][0];
+			countMultiplication++;
+		}
 		else{
 			int[][] A11 = new int[n/2][n/2];
 			int[][] A12 = new int[n/2][n/2];
@@ -49,14 +51,13 @@ public class Strassen {
 		return R;
 	}
 	
-	public int[][] sub(int[][] A, int[][] B)
-    {
+	public int[][] sub(int[][] A, int[][] B){
         int n = A.length;
         int[][] C = new int[n][n];
         for (int i = 0; i < n; i++)
             for (int j = 0; j < n; j++){
                 C[i][j] = A[i][j] - B[i][j];
-                count++;
+                countAddition++;
             }
             return C;
     }
@@ -68,7 +69,7 @@ public class Strassen {
         for (int i = 0; i < n; i++)
             for (int j = 0; j < n; j++){
                 C[i][j] = A[i][j] + B[i][j];
-                count++;
+                countAddition++;
             }
         return C;
     }
