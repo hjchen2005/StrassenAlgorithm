@@ -1,1 +1,4 @@
 # StrassenAlgorithm
+- Credit http://www.sanfoundry.com/java-program-strassen-algorithm/
+- added counters for additions/subtractions
+- For a 4x4 matrices multiplied by another, the counter gets 198 additions
