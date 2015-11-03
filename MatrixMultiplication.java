@@ -32,8 +32,9 @@ public class MatrixMultiplication{
 	            System.out.print(C[i][j] +" ");
 	        System.out.println();
 	    }
-	    JOptionPane.showMessageDialog(null, "additions" + Strassen.count);
+	    scan.close();
+	    JOptionPane.showMessageDialog(null, "additions " + Strassen.countAddition);
+	    JOptionPane.showMessageDialog(null, "multiplications "+Strassen.countMultiplication);
 	}
-	
 }
 
